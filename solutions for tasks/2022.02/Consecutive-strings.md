@@ -31,12 +31,12 @@ n being the length of the string array, if n = 0 or k > n or k <= 0 return "" (r
 function longestConsec(strarr, k) {
     // your code
   let quantity = strarr.length - k +1
-  if(quantity == 0 || quantity < k || k <= 0) {
+  if(strarr.length == 0 || strarr.length < k || k <= 0) {
     return ''
   }
   
   let longest = ''
-  for(let i = 0; i+1 <= quantity; i++) {
+  for(let i = 0; i + 1 <= quantity; i++) {
     let intermediateValue = ''
     for(let j = 0; j < k; j++) {
       if((i + j) <= strarr.length) {
